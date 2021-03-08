@@ -1,0 +1,18 @@
+<h2 class="text-center">Lista donaciones:</h2>
+
+<form class="col" #formDonations="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="texto">Donation tittle:</label>
+        <p>
+            <input required class="form-control" type="text" id="texto" name="texto" #modelo="ngModel" [(ngModel)]="donation.title" placeholder="tittle" />
+        </p>
+    </div>
+
+    <div class="form-group">
+        <label for="description">Description:</label>
+        <p>
+            <input required class="form-control" type="text" id="categoria" name="description" #precio="ngModel" [(ngModel)]="donation.description" placeholder="description" />
+        </p>
+    </div>
+    <button type="submit" class="btn btn-primary">Donar</button>
+</form>

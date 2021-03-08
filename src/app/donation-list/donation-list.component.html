@@ -1,0 +1,16 @@
+<h2 class="text-center">Lista de donaciones</h2>
+
+<div class="loader" *ngIf="loading"></div>
+
+<div *ngFor="let donation of donations;">
+
+    <div class="card mb-3" style="width: 20rem;">
+
+        <div class="card-body">
+            <h4 class="card-title">{{donation.title}}</h4>
+            <p class="card-text">{{donation.description}}</p>
+            <a (click)="deleteDonation(donation._id)" class="btn btn-primary">Borrar</a>
+        </div>
+    </div>
+
+</div>
